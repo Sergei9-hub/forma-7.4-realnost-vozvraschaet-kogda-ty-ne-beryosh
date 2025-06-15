@@ -21,6 +21,7 @@
             align-items: center;
             line-height: 1.6;
             overflow: hidden;
+            padding: 20px;
         }
 
         .container {
@@ -29,6 +30,10 @@
             max-width: 800px;
             padding: 2rem;
             z-index: 2;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
         }
 
         .reality-fabric {
@@ -69,11 +74,12 @@
 
         h1 {
             font-size: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             opacity: 0;
             animation: fadeFloat 1s ease-out forwards;
             color: #34495e;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
         }
 
         p {
@@ -81,17 +87,15 @@
             margin-bottom: 1rem;
             opacity: 0;
             animation: fadeFloat 1s ease-out forwards;
-            backdrop-filter: blur(5px);
             padding: 0.5rem;
             border-radius: 5px;
-            background: rgba(255,255,255,0.1);
+            text-align: center;
         }
 
         p:empty {
-            height: 1.5rem;
+            height: 2rem;
             background: transparent;
-            backdrop-filter: none;
-            padding: 0;
+            margin: 1rem 0;
         }
 
         @keyframes fadeFloat {
@@ -144,6 +148,7 @@
         p:nth-child(7) { animation-delay: 1.2s; }
         p:nth-child(8) { animation-delay: 1.4s; }
         p:nth-child(9) { animation-delay: 1.6s; }
+        p:nth-child(10) { animation-delay: 1.8s; }
     </style>
 </head>
 <body>
