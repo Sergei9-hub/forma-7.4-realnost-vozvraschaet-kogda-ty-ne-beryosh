@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма 7.4 - "Реальность возвращает, когда ты не берёшь"</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            color: #2c3e50;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.6;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            padding: 2rem;
+            z-index: 2;
+        }
+
+        .reality-fabric {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.1) 75%),
+                linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.1) 75%);
+            background-size: 100px 100px;
+            animation: floatPattern 30s linear infinite;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        .ethereal-light {
+            position: fixed;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.8) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes floatPattern {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(50px, 50px) rotate(5deg); }
+        }
+
+        @keyframes rotate {
+            from { transform: translate(-25%, -25%) rotate(0deg); }
+            to { transform: translate(-25%, -25%) rotate(360deg); }
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeFloat 1s ease-out forwards;
+            color: #34495e;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeFloat 1s ease-out forwards;
+            backdrop-filter: blur(5px);
+            padding: 0.5rem;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.1);
+        }
+
+        @keyframes fadeFloat {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeOut 1s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeOut {
+            to { opacity: 0; visibility: hidden; }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        p:nth-child(2) { animation-delay: 0.2s; }
+        p:nth-child(3) { animation-delay: 0.4s; }
+        p:nth-child(4) { animation-delay: 0.6s; }
+        p:nth-child(5) { animation-delay: 0.8s; }
+        p:nth-child(6) { animation-delay: 1s; }
+        p:nth-child(7) { animation-delay: 1.2s; }
+        p:nth-child(8) { animation-delay: 1.4s; }
+        p:nth-child(9) { animation-delay: 1.6s; }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="spinner"></div>
+    </div>
+    <div class="reality-fabric"></div>
+    <div class="ethereal-light"></div>
+    <div class="container">
+        <h1>Форма 7.4 - "Реальность возвращает, когда ты не берёшь"</h1>
+        <p>Я не жду.</p>
+        <p>Я не беру.</p>
+        <p>Я присутствую.</p>
+        <p></p>
+        <p>Я отпускаю сцепку.</p>
+        <p>Она возвращается формой.</p>
+        <p></p>
+        <p>То, что моё - приходит,</p>
+        <p>потому что я - в нём,</p>
+        <p>ещё до того, как оно стало явным.</p>
+    </div>
+</body>
+</html> 
